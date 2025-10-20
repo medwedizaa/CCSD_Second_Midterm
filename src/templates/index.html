@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Cat Gallery</title>
+    <style>
+        body { text-align: center; font-family: Arial; margin-top: 40px; }
+        img { width: 300px; border-radius: 10px; box-shadow: 0 0 10px gray; margin: 10px; }
+        button { margin-top: 20px; padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>🐱 Random Cat Gallery</h1>
+    <img src="{{ cat_url }}" alt="Random Cat"><br>
+    <button onclick="window.location.reload()">Get another cat</button>
+    <h2>Recent Cats</h2>
+    {% for url in cats %}
+        <img src="{{ url }}" alt="Saved Cat">
+    {% endfor %}
+</body>
+</html>
