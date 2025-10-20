@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cat History</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        img { max-width: 150px; border-radius: 10px; margin: 5px; }
+        a { display: block; margin-top: 20px; text-decoration: none; color: blue; }
+        .gallery { display: flex; flex-wrap: wrap; justify-content: center; }
+    </style>
+</head>
+<body>
+    <h1>🐾 Recently Viewed Cats</h1>
+    <div class="gallery">
+        {% for cat in cats %}
+            <div>
+                <img src="{{ cat.image_url }}" alt="Cat">
+                <p>{{ cat.fetched_at }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="/">Back to Random Cat</a>
+</body>
+</html>
+
