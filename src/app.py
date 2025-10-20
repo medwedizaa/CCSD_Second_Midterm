@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Connect to DB
 def get_db_connection():
     return mysql.connector.connect(
-        host="mysql-server",        # caontainer name from docker-compose.yml
+        host="db",        # caontainer name from docker-compose.yml
         user="root",
         password="root",
         database="cats_db"
